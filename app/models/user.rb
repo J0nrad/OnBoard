@@ -1,10 +1,10 @@
-class User < ApplicationController
+class User < ApplicationRecord
+
+  validates :password_digest, :email, presence: true
+  validates :username, :session_token, uniqueness: true, presence: true
+  validates :password, length: { minimum: 7 }, allow_nil: true
 
   attr_reader :password
-
-  validates :username, :password_digest, :session_token, presence: true
-  validates :username, uniqueness: true
-  validates :password, length: { minimum: 7 }, allow_nil: true
 
   has_many :products,
     foreign_key: :seller_id
