@@ -6,8 +6,8 @@ class User < ApplicationRecord
 
   attr_reader :password
 
-  # has_many :products,
-  #   foreign_key: :seller_id
+  has_many :products,
+    foreign_key: :seller_id
   #
   # has_many :favorites,
   #   foreign_key: :product_id
