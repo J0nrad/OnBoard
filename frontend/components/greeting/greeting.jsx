@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import NavBarContainer from '../nav_bar/nav_bar_container'
 
 const Greeting = ({ currentUser, logout }) => {
   const sessionLinks = () => (
@@ -10,6 +11,7 @@ const Greeting = ({ currentUser, logout }) => {
 
   const personalGreet = () => (
     <hgroup className="header-group">
+      <NavBarContainer/>
       <h2 className="header-name">Welcome, {currentUser.username}!</h2>
       <button className="header-button" onClick={logout}>Log Out</button>
     </hgroup>

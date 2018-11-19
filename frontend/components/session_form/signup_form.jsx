@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { Fausercircle } from 'react-icons/fa';
 
 class SignUpForm extends React.Component {
 
@@ -40,42 +41,37 @@ class SignUpForm extends React.Component {
 
   render() {
     return (
-      <div className="signup-form-container">
-        <form onSubmit={this.handleSubmit} className="signup-form-box">
-          Welcome to OnBoard!
-          <br/>
-          Please {this.props.formType} or {this.props.navLink}
-          {this.renderErrors()}
-          <div className="signup-form">
-            <br/>
-            <label>Username:
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="signup-input"
-              />
-            </label>
-            <br/>
-            <label>Email:
-              <input type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
-                className="signup-input"
-              />
-            </label>
-            <br/>
-            <label>Password:
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="signup-input"
-              />
-            </label>
-            <br/>
-            <input className="signup-submit" type="submit" value={this.props.formType} />
-          </div>
+      <div className="wrapper-signup">
+        <div className="signup-form-container">
+          <form onSubmit={this.handleSubmit} className="signup-form-box">
+            <div className="form-type-signup">
+              Please {this.props.formType} or {this.props.navLink}
+              {this.renderErrors()}
+            </div>
+            <div className="signup-form">
+                <input type="text"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className="signup-input"
+                  placeholder="Username"
+                />
+                <input type="text"
+                  value={this.state.email}
+                  onChange={this.update('email')}
+                  className="signup-input"
+                  placeholder="Email"
+                />
+                <input type="Password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="signup-input"
+                  placeholder="Password"
+                />
+              <input className="signup-submit" type="submit" value={this.props.formType} />
+            </div>
         </form>
       </div>
+    </div>
     );
   }
 }
@@ -105,7 +101,6 @@ class SignUpForm extends React.Component {
 //     onChange={this.checkPassword}
 //     className="signup-input"
 //   />
-// </label>
-// <br/>
+// </lab
 
 export default withRouter(SignUpForm);
