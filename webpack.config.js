@@ -5,7 +5,7 @@ module.exports = {
   entry: './frontend/on_board.jsx',
   output: {
     path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
     rules: [
@@ -17,7 +17,7 @@ module.exports = {
           query: {
             presets: ['@babel/env', '@babel/react']
           }
-        },
+        }
       }
     ]
   },
