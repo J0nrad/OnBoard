@@ -1,4 +1,5 @@
 class Api::UsersController < ApplicationController
+
   def create
     @user = User.new(users_params)
 
@@ -11,14 +12,12 @@ class Api::UsersController < ApplicationController
   end
 
   def index
-    if params[:users]
-      @users = User
-        .where('username ILIKE ? OR name ILIKE ?', "%#{params[:users]}%", "%#{params[:users]}%" )
-        .limit(10)
-    else
-      @users = User.all
-    end
+    @users = User.all
+    render :index
+  end
 
+  def show
+    @user = User.find(params[:id])
   end
 
 

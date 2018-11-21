@@ -1,10 +1,9 @@
-export const fetchProducts = data => {
+export const fetchProducts = () => {
   return $.ajax({
     method: 'GET',
-    url: 'api/products',
-    data
+    url: 'api/products'
   })
-};;
+};
 
 export const fetchProduct = id => {
   return $.ajax({
@@ -14,13 +13,13 @@ export const fetchProduct = id => {
 };
 
 
-export const createProduct = benchForm => {
+export const createProduct = product => {
   return $.ajax({
     method: 'POST',
     url: 'api/products',
     data: productForm
   })
-};;
+};
 
 export const updateProduct = product => {
   return $.ajax({
@@ -28,7 +27,7 @@ export const updateProduct = product => {
     method: 'PATCH',
     data: { product }
   })
-);
+};
 
 export const deleteProduct = id => {
   return $.ajax({
