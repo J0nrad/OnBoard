@@ -6,7 +6,7 @@ import { RECEIVE_ALL_PRODUCTS,
 const _defaultState = {
   products: {}
 };
-
+//REMEMBER YOU ARE CREATING A NEW PRODUCT DETAIL PAGE
 
 const ProductReducer = (state = _defaultState, action) => {
   Object.freeze(state);
