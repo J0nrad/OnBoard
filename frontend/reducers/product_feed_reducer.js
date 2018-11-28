@@ -10,7 +10,7 @@ const ProductFeedReducer = (state = _defaultState, action) => {
 
   switch (action.type) {
     case RECEIVE_FEED_PRODUCTS:
-      return merge({}, _defaultState, { photos: action.products });
+      return merge({}, _defaultState, { products: action.products });
 
     case REMOVE_FEED:
       return _defaultState;

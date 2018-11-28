@@ -1,0 +1,203 @@
+.full-display {
+ display: flex;
+ padding: 110px;
+ background-image: url('Beach.jpeg');
+ background-size: 100% 100%;
+ justify-content: center;
+ align-items: center;
+}
+
+.product-form-wrapper {
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 5px;
+  padding: 25px 10px;
+  width: 450px;
+  margin: auto;
+  border-radius: 20px;
+  border: 2px solid gray;
+  background-color: rgba(black, 0.8)
+}
+
+.product-submit {
+  line-height: 2.65px;
+  width: 222px;
+  text-align: center;
+  height: 3px;
+  margin-top: 2px;
+  margin: 6px;
+  background-color: gray;
+  border-radius: 18px;
+  border: 2px solid #33FFCA;
+  background-color: none;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  padding: 9px 15px;
+  transition: 1s box-shadow;
+}
+
+.product-submit:hover {
+  background-color: rgb(13, 82, 77);
+  border-color: #33FFCA;
+  color: #33FFCA;
+  box-shadow: 0 3px 23px 0px;
+  font-weight: lighter;
+}
+
+.sports-category-label {
+  margin-bottom: -3px;
+
+}
+
+.category-select-button {
+  background-color: grey;
+  width: 200px;
+}
+
+.product-form-wrapper label {
+  flex: 1 1 9ems;
+  margin: 2px;
+  display: flex;
+}
+
+.product-form-wrapper input {
+  background-color: grey;
+  font-family: sans-serif;
+}
+
+.product-form-wrapper input:placeholder {
+  color: white;
+  font-family: sans-serif;
+}
+
+product-title-label {
+  padding-top: 5px;
+}
+
+.product-price-label {
+
+}
+
+input[type="file"] {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+  // alternative to pointer-events, compatible with all browsers, just make it impossible to find
+  width: 1px;
+  height: 1px;
+  font-size: 10px;
+}
+
+.product-form-wrapper .file-image-label {
+  line-height: 2.65px;
+  width: 222px;
+  height: 3px;
+  margin-top: 2px;
+  margin: 6px;
+  background-color: gray;
+  border-radius: 18px;
+  border: 2px solid #33FFCA;
+  background-color: none;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  padding: 9px 15px;
+  transition: 1s box-shadow;
+  display: block;
+  text-align: center;
+}
+
+.file-image-label:hover {
+  background-color: black;
+  border-color: #33FFCA;
+  color: gray;
+  box-shadow: 0 5px 25px 0px;
+  font-weight: thick;
+}
+
+.product-seperator {
+  font-weight: 200;
+  font-size: 23px;
+  color: white;
+  font-family: monospace;
+}
+
+.images-input {
+  width: auto;
+}
+//
+.price-input {
+  border-radius: 18px;
+  border-color: white;
+  border-width: thin;
+  border-style: solid;
+  width: 250px;
+  text-align: center;
+  margin: 5px;
+  margin-bottom: 12px;
+  margin-top: 1px;
+  color: white;
+}
+
+.product-form-wrapper .product-form-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+  font-size: 17px;
+  border-bottom: 1px solid #33FFCA;
+  border-right: .7px solid #10c7c7;
+  border-left: .7px solid #10c7c7;
+  border-top: 1px solid #33FFCA;
+  padding: 0px 20px;
+  border-width: thin;
+  margin-bottom: 10px;
+  padding: 5px 13px;
+  color: white;
+}
+.product-input {
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 18px;
+  border-color: white;
+  border-width: thin;
+  border-style: solid;
+  width: 250px;
+  text-align: center;
+  margin-bottom: 9px;
+  padding-bottom: 2px;
+}
+
+.product-input::placeholder {
+  font-size: 12px;
+  font-family: sans-serif;
+  align-items: center;
+  color: white;
+}
+
+.category-select-button {
+  font-family: 'Montserrat', sans-serif;
+  padding: 13px;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 5px;
+  width: 50px;
+  height: 100%;
+  border-bottom: 0px;
+  border-radius: 3px;
+  font-size: 12px;
+  box-shadow: 0px 1em 2em -1.5em rgba(0, 0, 0, .5);
+}
+
+.product-bottom-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  align-content: space-between;
+}

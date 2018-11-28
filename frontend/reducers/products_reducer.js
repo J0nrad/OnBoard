@@ -7,7 +7,8 @@ const _defaultState = {
   products: {}
 };
 
-const ProductFeedReducer = (state = _defaultState, action) => {
+
+const ProductReducer = (state = _defaultState, action) => {
   Object.freeze(state);
 
   switch (action.type) {
@@ -25,4 +26,4 @@ const ProductFeedReducer = (state = _defaultState, action) => {
   };
 };
 
-export default ProductFeedReducer;
+export default ProductReducer;

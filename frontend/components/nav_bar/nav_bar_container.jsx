@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { login } from '../../actions/session_actions';
+import { login,logout } from '../../actions/session_actions';
 import NavBar from './nav_bar';
 
 const msp = ({ session, entities: { users } }) => {
@@ -12,7 +12,8 @@ const msp = ({ session, entities: { users } }) => {
 
 const mdp = dispatch => {
   return {
-    processFrom: (user) => dispatch(login(user))
+    processFrom: (user) => dispatch(login(user)),
+    logout: () => dispatch(logout())
   };
 };
 

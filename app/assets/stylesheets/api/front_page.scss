@@ -1,0 +1,36 @@
+.front-page-wrapper {
+  background-size: 100% 100%;
+  padding: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url('beach-black-and-white-nylon-strings-687459.jpg');
+}
+
+.front-stack {
+  background-color: rgba(black, 0.8);
+  border-radius: 15px;
+  align-self: center;
+  text-align: center;
+  background-blend-mode: color;
+  padding: 40px;
+  border: .37px solid gray;
+}
+
+.front-page-header {
+  font-family: Roboto;
+  font-weight: bold;
+  padding: 5px 2px;
+  margin: auto;
+  font-size: 25px;
+  color: white;
+}
+
+.front-page-mid {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 100;
+  color: white;
+  padding: 5px 2px 15px 2px;
+}

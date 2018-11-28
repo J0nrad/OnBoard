@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { Fausercircle } from 'react-icons/fa';
 
 class SignUpForm extends React.Component {
 
