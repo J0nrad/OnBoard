@@ -1,0 +1,15 @@
+current directory: /Users/JJ/Desktop/OnBoard/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+/Users/JJ/.rvm/rubies/ruby-2.5.3/bin/ruby -r ./siteconf20181128-22925-1yqhchc.rb extconf.rb
+creating Makefile
+
+current directory: /Users/JJ/Desktop/OnBoard/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /Users/JJ/Desktop/OnBoard/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+
+current directory: /Users/JJ/Desktop/OnBoard/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 debug_inspector.bundle ./.gem.20181128-22925-hwxhsx
