@@ -1,6 +1,6 @@
 import {
   RECEIVE_ERRORS,
-  RECEIVE_ALL_PRODUCTS,
+  RECEIVE_PRODUCTS,
   RECEIVE_PRODUCT,
   CREATE_PRODUCT,
   REMOVE_PRODUCT
@@ -10,7 +10,7 @@ const ProductsErrorsReducer = (state = [], action) => {
   switch(action.type) {
     case RECEIVE_ERRORS:
       return action.errors;
-    case RECEIVE_ALL_PRODUCTS:
+    case RECEIVE_PRODUCTS:
       return [];
     case RECEIVE_PRODUCT:
       return [];

@@ -1,14 +1,15 @@
 import * as ProductApiUtil from '../util/product_api_util';
 
-export const RECEIVE_ALL_PRODUCTS = 'RECEIVE_ALL_PRODUCTS';
+export const RECEIVE_PRODUCTS = 'RECEIVE_PRODUCTS';
 export const RECEIVE_PRODUCT = 'RECEIVE_PRODUCT';
 export const CREATE_PRODUCT = 'CREATE_PRODUCT';
 export const REMOVE_PRODUCT = 'REMOVE_PRODUCT';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 export const ADD_IMAGE = 'ADD_IMAGE';
+export const REMOVE_FEED = 'REMOVE_FEED';
 
-export const recieveAllProducts = products => ({
-  type: RECEIVE_ALL_PRODUCTS,
+export const receiveProducts = products => ({
+  type: RECEIVE_PRODUCTS,
   products
 });
 
@@ -17,7 +18,7 @@ export const receiveErrors = errors => ({
   errors
 });
 
-export const recieveProduct = product => ({
+export const receiveProduct = product => ({
   type: RECEIVE_PRODUCT,
   product
 });
@@ -30,19 +31,23 @@ export const removeProduct = product => ({
 export const addImage = image => ({
   type: ADD_IMAGE,
   product
-})
+});
 
+export const removeFeed = () => {
+  return ({
+    type: REMOVE_FEED
+  });
+};
 
-
-export const fetchProducts = () => {
+export const fetchProducts = () => dispatch => {
   return ProductApiUtil.fetchProducts().then(products => {
-    return dispatch(receiveAllProducts(products))
+    return dispatch(receiveProducts(products))
   }, err => {
       return dispatch(receiveErrors(err.responseJSON));
   });
 };
 
-export const fetchProduct = (id) => {
+export const fetchProduct = (id) => dispatch => {
   return ProductApiUtil.fetchProduct(id).then(currentProduct => {
     return dispatch(receiveProduct(currentProduct))
   }, err => {

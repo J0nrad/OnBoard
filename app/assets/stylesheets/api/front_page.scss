@@ -1,11 +1,11 @@
 .front-page-wrapper {
-  background-size: 100% 100%;
-  padding: 140px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  background-image: url('beach-black-and-white-nylon-strings-687459.jpg');
+  justify-content: center;
+  background: image-url('beach-black-and-white-nylon-strings-687459.jpg');
+  background-size: 100% 100%;
 }
 
 .front-stack {
@@ -16,6 +16,7 @@
   background-blend-mode: color;
   padding: 40px;
   border: .37px solid gray;
+  margin: 5px;
 }
 
 .front-page-header {

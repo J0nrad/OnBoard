@@ -7,13 +7,14 @@ class ProductShow extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.post.id != this.props.match.params.productId) {
+    if (prevProps.match.params.productId != this.props.match.params.productId) {
       this.props.fetchProduct(this.props.match.params.productId);
     }
   }
 
   render() {
     const { product } = this.props;
+    // const { sellingUser } = this.state.entities.users[seller_id]
     if (!product) {
       return (
         <div>
@@ -30,7 +31,9 @@ class ProductShow extends React.Component {
         <h3>{product.title}</h3>
         <p>{product.description}</p>
         <Link to="/products">Back to Index</Link>
-      </div>
+        <Link to="/:seller_id/chats">Is it still available?</Link>
+        <Link to="/:seller_id/chats">Price negotiable?</Link>
+    </div>
     );
   }
 }
