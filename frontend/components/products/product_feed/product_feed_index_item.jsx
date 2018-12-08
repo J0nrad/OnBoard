@@ -3,15 +3,21 @@ import { Link } from 'react-router-dom';
 
 const ProductFeedIndexItem = ({ product }) => {
   return (
-    <ul>
-      <Link to={`/products/${product.id}`}>
-        <img src={ product.image_url } />
-      </Link>&nbsp;
-      <div>
-        {product.title}
-        {product.price}
+    <div className="check-wrap">
+      <div className="product-list">
+        <div className='product-box'>
+          <div className="price-product">
+            ${product.price}
+          </div>
+          <Link className="img-link" to={`/products/${product.id}`}>
+            <img className="product-image" src={ product.image_url } />
+          </Link>
+          <div>
+            {product.title}
+          </div>
+        </div>
       </div>
-    </ul>
+    </div>
   );
 };
 

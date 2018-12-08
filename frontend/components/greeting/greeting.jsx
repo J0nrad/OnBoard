@@ -11,10 +11,15 @@ const Greeting = ({ currentUser, logout }) => {
   )
 
   const personalGreet = () => (
-    <hgroup className="header-group">
-      <h2 className="header-name">Welcome, {currentUser.username}!</h2>
-      <button className="header-button" onClick={logout}>Log Out</button>
-    </hgroup>
+    <div className="header-group">
+      <h2 className="header-name">Welcome,  {currentUser.username}!</h2>
+      <Link className="products-link" to={`/products`}>
+        <input className="go-to-index" type="submit" value="Find a new Board!"/>
+      </Link>
+      <Link className="sell-link" to={`/products`}>
+        <input className="sell-button" type="submit" value="Sell Your Gear!"/>
+      </Link>
+    </div>
   )
 
   return currentUser ? personalGreet() : sessionLinks();

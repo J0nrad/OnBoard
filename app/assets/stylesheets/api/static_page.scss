@@ -1,6 +1,62 @@
 // body {
 //   background-image: url('ScaleWidthWyIxMjAwIl0-Eye-sym_Main.jpg');
 // }
+.header-name {
+  padding: 10%;
+
+}
+
+.go-to-index {
+  line-height: 2.65px;
+  width: 222px;
+  text-align: center;
+  height: 3px;
+  margin-top: 2px;
+  margin: 6px;
+  background-color: gray;
+  border-radius: 18px;
+  border: 2px solid #33FFCA;
+  background-color: none;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  padding: 9px 15px;
+  transition: 1s box-shadow;
+}
+
+.go-to-index:hover {
+  background-color: rgb(13, 82, 77);
+  border-color: #33FFCA;
+  color: white;
+  box-shadow: 0 3px 23px 0px;
+  font-weight: lighter;
+}
+
+.go-to-index {
+  line-height: 2.65px;
+  width: 222px;
+  text-align: center;
+  height: 3px;
+  margin-top: 2px;
+  margin: 6px;
+  background-color: gray;
+  border-radius: 18px;
+  border: 2px solid #33FFCA;
+  background-color: none;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  padding: 9px 15px;
+  transition: 1s box-shadow;
+}
+
+.go-to-index:hover {
+  background-color: rgb(13, 82, 77);
+  border-color: #33FFCA;
+  color: white;
+  box-shadow: 0 3px 23px 0px;
+  font-weight: lighter;
+}
 
 .header-logo {
   font-family: sans-serif;

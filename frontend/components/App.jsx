@@ -14,7 +14,7 @@ const App = () => (
   <NavBarContainer />
     <Switch>
       <AuthRoute path="/login" component={LogInFormContainer}/>
-      <AuthRoute path="/signup" component={SignUpFormContainer}/>
+      <Route path="/signup" component={SignUpFormContainer}/>
       <Route exact path="/products" component={ProductFeedContainer}/>
       <ProtectedRoute path="/product" component={ProductFormContainer}/>
       <ProtectedRoute path="/products/:productId" component={ProductShowContainer}/>

@@ -25,14 +25,13 @@ class ProductShow extends React.Component {
 
     return (
       <div className="product-show_wrapper">
-        <label>Price</label>
-        <h3>{product.price}</h3>
-        <img className="index-image" src={product.image_url}/>
-        <h3>{product.title}</h3>
-        <p>{product.description}</p>
-        <Link to="/products">Back to Index</Link>
-        <Link to="/:seller_id/chats">Is it still available?</Link>
-        <Link to="/:seller_id/chats">Price negotiable?</Link>
+        <h3 className="product-price-show">{product.price}</h3>
+        <img className="product-show-image" src={product.image_url}/>
+        <h3 className="product-title-show">{product.title}</h3>
+        <p className="product-description-show">{product.description}</p>
+        <Link className="back-to-index" to="/products">Back to Index</Link>
+        <Link className="to-chats-show" to="/:seller_id/chats">Is it still available?</Link>
+        <Link className="product-negotiable-show" to="/:seller_id/chats">Price negotiable?</Link>
     </div>
     );
   }
