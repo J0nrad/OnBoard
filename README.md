@@ -1,11 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+OnBoard, a Letgo like clone, is a shared economy application that allows users to publicly share action sports products they are interested in selling or renting to other users of the app. The secondary usage of this application is to give users the ability to purchase products from other users within the social ecosystem.
 
-* Ruby version
+* 
 
 * System dependencies
 
