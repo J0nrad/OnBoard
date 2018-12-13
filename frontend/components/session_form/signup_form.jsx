@@ -40,35 +40,37 @@ class SignUpForm extends React.Component {
 
   render() {
     return (
-      <div className="wrapper-signup">
-        <div className="signup-form-container">
-          <form onSubmit={this.handleSubmit} className="signup-form-box">
-            <div className="form-type-signup">
-              Please {this.props.formType} or {this.props.navLink}
-              {this.renderErrors()}
-            </div>
-            <div className="signup-form">
-                <input type="text"
-                  value={this.state.username}
-                  onChange={this.update('username')}
-                  className="signup-input"
-                  placeholder="Username"
-                />
-                <input type="text"
-                  value={this.state.email}
-                  onChange={this.update('email')}
-                  className="signup-input"
-                  placeholder="Email"
-                />
-                <input type="Password"
-                  value={this.state.password}
-                  onChange={this.update('password')}
-                  className="signup-input"
-                  placeholder="Password"
-                />
-              <input className="signup-submit" type="submit" value={this.props.formType} />
-            </div>
-        </form>
+      <div className="signup-background">
+        <div className="wrapper-signup">
+          <div className="signup-form-container">
+            <form onSubmit={this.handleSubmit} className="signup-form-box">
+              <div className="form-type-signup">
+                Please {this.props.formType} or {this.props.navLink}
+                {this.renderErrors()}
+              </div>
+              <div className="signup-form">
+                  <input type="text"
+                    value={this.state.username}
+                    onChange={this.update('username')}
+                    className="signup-input"
+                    placeholder="Username"
+                  />
+                  <input type="text"
+                    value={this.state.email}
+                    onChange={this.update('email')}
+                    className="signup-input"
+                    placeholder="Email"
+                  />
+                  <input type="Password"
+                    value={this.state.password}
+                    onChange={this.update('password')}
+                    className="signup-input"
+                    placeholder="Password"
+                  />
+                <input className="signup-submit" type="submit" value={this.props.formType} />
+              </div>
+          </form>
+        </div>
       </div>
     </div>
     );

@@ -8,7 +8,7 @@ import { RECEIVE_PRODUCTS,
 const _defaultState = {};
 //REMEMBER YOU ARE CREATING A NEW PRODUCT DETAIL PAGE
 
-const ProductReducer = (state = _defaultState, action) => {
+const ProductsReducer = (state = _defaultState, action) => {
   Object.freeze(state);
 
   switch (action.type) {
@@ -28,4 +28,4 @@ const ProductReducer = (state = _defaultState, action) => {
   };
 };
 
-export default ProductReducer;
+export default ProductsReducer;

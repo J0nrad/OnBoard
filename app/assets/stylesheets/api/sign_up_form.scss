@@ -1,13 +1,24 @@
+.signup-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: image-url('beach-sunset.jpg');
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+
+}
+
 .wrapper-signup {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
   position: relative;
-  top: 55px;
   padding: 25px 10px;
   width: 450px;
-  margin: auto;
+  opacity: .90;  
   border-radius: 20px;
   border: 2px solid gray;
 }

@@ -4,7 +4,7 @@ import  ProductsErrorsReducer  from './products_errors_reducer';
 
 const errorsReducer = combineReducers({
   session: sessionsErrorsReducer,
-  products: ProductsErrorsReducer
+  products: ProductsErrorsReducer,
 })
 
 export default errorsReducer;
