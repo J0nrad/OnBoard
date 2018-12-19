@@ -23,7 +23,7 @@ class Api::ProductsController < ApplicationController
   end
 
   def destroy
-    @product = Product.find(params[:id])
+    @product = Product.find_by(id: params[:id])
       if @product.destroy
         render :show
       else
@@ -32,7 +32,7 @@ class Api::ProductsController < ApplicationController
   end
 
   def update
-    @product = Product.find(params[:id])
+    @product = Product.find_by(id: params[:id])
     if @product.update_attributes(product_params)
       render :show
     else

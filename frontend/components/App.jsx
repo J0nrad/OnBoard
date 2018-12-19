@@ -8,6 +8,7 @@ import LogInFormContainer from './session_form/login_form_container';
 import ProductFormContainer from './products/product_form/product_form_container';
 import ProductShowContainer from './products/product_show/product_show_container';
 import ProductFeedContainer from './products/product_feed/product_feed_container';
+import ProductCategoryFeed from './products/product_feed/product_category_feed';
 
 const App = () => (
   <div>
@@ -19,6 +20,7 @@ const App = () => (
       <ProtectedRoute path="/product" component={ProductFormContainer}/>
       <ProtectedRoute path="/products/:productId" component={ProductShowContainer}/>
       <Route path="/" component={GreetingContainer} />
+      <Route path="/chats/:chatsId" />
     </Switch>
   </div>
 );

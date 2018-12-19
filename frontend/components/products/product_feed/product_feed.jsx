@@ -1,4 +1,5 @@
 import React from 'react';
+import ProductCategoryFeed from './product_category_feed';
 import ProductFeedContainer from './product_feed_container';
 import ProductFeedIndexItem from './product_feed_index_item';
 
@@ -10,6 +11,8 @@ class ProductFeed extends React.Component {
 
  render() {
    return (
+     <div>
+       <ProductCategoryFeed />
        <div className = 'product-wrapper'>
          {this.props.products.map(product => {
            if (product.image_url === null) {
@@ -19,6 +22,7 @@ class ProductFeed extends React.Component {
          })
        }
        </div>
+    </div>
    );
  }
 

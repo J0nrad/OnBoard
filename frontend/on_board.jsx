@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 import { fetchProduct, fetchProducts } from './util/product_api_util';
+import { fetchChats } from './util/chat_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
   window.getState =store.getState;
+  window.fetchChats = fetchChats
   window.fetchProducts = fetchProducts;
   window.fetchProduct = fetchProduct;
   const root = document.getElementById('root');

@@ -9,12 +9,12 @@ export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
 export const receiveChats = chats => ({
   type: RECEIVE_CHATS,
-  chats: currentUser.chats
+  chats: chats
 });
 
 export const receiveChat = chat => ({
   type: RECEIVE_CHAT,
-  chat: currentUser.chat
+  chat: chat
 });
 
 

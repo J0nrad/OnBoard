@@ -1,5 +1,6 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
+
 
 class SignUpForm extends React.Component {
 
@@ -67,7 +68,9 @@ class SignUpForm extends React.Component {
                     className="signup-input"
                     placeholder="Password"
                   />
-                <input className="signup-submit" type="submit" value={this.props.formType} />
+                <Link className="sell-link" to={`/`}>
+                  <input className="signup-submit" type="submit" value={this.props.formType} />
+                </Link>
               </div>
           </form>
         </div>

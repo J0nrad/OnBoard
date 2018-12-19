@@ -12,14 +12,14 @@ class Chat < ApplicationRecord
   belongs_to :product
 
   has_many :messages
-  # dependent: :destroy
+  
 
-  has_one :seller,
-  through: :product,
-  source: :user
+  # has_one :seller,
+  # through: :product,
+  # source: :user
 
-  has_one :sender,
-  through: :messages,
-  source: :sender
+  # has_one :sender,
+  # through: :messages,
+  # source: :sender
 
 end

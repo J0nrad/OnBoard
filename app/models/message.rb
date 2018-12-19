@@ -11,16 +11,18 @@
 #
 
 class Message < ApplicationRecord
-  validates :body, presence: true
+  validates :body, :chat_id, :sender_id, presence: true
 
-  belongs_to :chat
+  belongs_to :chat,
+  foreign_key: :chat_id,
+  class_name: :Chat
 
   belongs_to :sender,
   foreign_key: :sender_id,
   class_name: :User
 
-  has_one :seller,
-  through: :chat,
-  source: :seller
+  # has_one :seller,
+  # through: :chat,
+  # source: :seller
 
 end

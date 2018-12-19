@@ -27,7 +27,6 @@
 //           product={ products[id] } />
 //       );
 //     });
-//     debugger;
 //     return productsList;
 //   }
 //

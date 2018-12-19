@@ -16,8 +16,8 @@ export const fetchChat = id => {
 export const createChat = chat => {
   return $.ajax({
     method: 'POST',
-    url: 'api/products',
-    data: chatForm
+    url: 'api/chats',
+    data: { chat }
   })
 };
 

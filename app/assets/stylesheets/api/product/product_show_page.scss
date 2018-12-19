@@ -1,0 +1,79 @@
+.product-show_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 681px;
+    flex-wrap: wrap;
+}
+
+.product-show-make-beautify {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0% 3% 1% 3%;
+  border: 2px solid black;
+  border-radius: 2%;
+  background-color: rgba(0, 0, 0, 0.83);
+  color: lightgray;
+}
+
+.product-price-show {
+    padding-right: 8px;
+    font-family: "Open Sans";
+}
+
+.product-show-image {
+  border-radius: 2%;
+  margin: 0px 0px 18px 0px;
+  object-fit: contain;
+  object-position: center;
+  width: auto;
+  height: 200px;
+}
+
+.product-show-buttons {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  margin-top: 10px;
+}
+
+.to-chats-show {
+  line-height: 2.65px;
+  width: 138px;
+  text-align: center;
+  height: 3px;
+  margin-top: 2px;
+  margin: 6px;
+  background-color: gray;
+  border-radius: 18px;
+  border: 1px solid #33FFCA;
+  background-color: none;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  padding: 9px 15px;
+  transition: 1s box-shadow;
+  max-width: 150px;
+}
+
+.product-negotiable-show {
+  line-height: 2.65px;
+  width: 138px;
+  text-align: center;
+  height: 3px;
+  margin-top: 2px;
+  margin: 6px;
+  background-color: gray;
+  border-radius: 18px;
+  border: 1px solid #33FFCA;
+  background-color: none;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  padding: 9px 15px;
+  transition: 1s box-shadow;
+  max-width: 150px;
+}

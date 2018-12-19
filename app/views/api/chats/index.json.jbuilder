@@ -1,1 +1,5 @@
-json.array! @chats, partial: 'chats/chat', as: :chat
+@chats.each do |chat|
+  json.set! chat.id do
+    json.partial! 'api/chats/chat', chat: chat
+  end
+end

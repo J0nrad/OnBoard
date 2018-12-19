@@ -1,65 +1,30 @@
-class ChatsController < ApplicationController
-  before_action :set_chat, only: [:show, :edit, :update, :destroy]
+class Api::ChatsController < ApplicationController
+  # before_action :set_chat, only: [:show, :edit, :update, :destroy]
 
-  # GET /chats
-  # GET /chats.json
+  require :
   def index
     @chats = Chat.all
   end
 
-  # GET /chats/1
-  # GET /chats/1.json
   def show
-    @chat = Chat.includes(:messages, :seller, :sender, :product).find(params[:id])
+    @chat = Chat.find_by(id: params[:id])
+    render :show
   end
 
-  # # GET /chats/new
-  # def new
-  #   @chat = Chat.new
-  # end
 
-  # GET /chats/1/edit
-  # def edit
-  # end
-
-  # POST /chats
-  # POST /chats.json
   def create
     @chat = Chat.new(chat_params)
 
-    respond_to do |format|
       if @chat.save
-        format.html { redirect_to @chat, notice: 'Chat was successfully created.' }
-        format.json { render :show, status: :created, location: @chat }
+        render 'api/chats/show'
       else
-        format.html { render :new }
-        format.json { render json: @chat.errors, status: :unprocessable_entity }
+        render json: @chat.errors.full_messages
       end
-    end
   end
 
-  # PATCH/PUT /chats/1
-  # PATCH/PUT /chats/1.json
-  # def update
-  #   respond_to do |format|
-  #     if @chat.update(chat_params)
-  #       format.html { redirect_to @chat, notice: 'Chat was successfully updated.' }
-  #       format.json { render :show, status: :ok, location: @chat }
-  #     else
-  #       format.html { render :edit }
-  #       format.json { render json: @chat.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
-
-  # DELETE /chats/1
-  # DELETE /chats/1.json
   def destroy
+    @chat = Chat.find_by(chat_params[:id])
     @chat.destroy
-    respond_to do |format|
-      format.html { redirect_to chats_url, notice: 'Chat was successfully destroyed.' }
-      format.json { head :no_content }
-    end
   end
 
   private

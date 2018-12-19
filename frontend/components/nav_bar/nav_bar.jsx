@@ -44,9 +44,10 @@ const NavBar = ({ currentUser, logout }) => {
         placeholder="Search onBoard"
       />
       <nav className="nav-right">
-        <button className='logout-link'>
-          <Link className="log-out-text" to='/'>Log Out</Link>
-        </button>
+        <Link className="log-out-text" to='/login'>
+          <button onClick={logout} className='logout-link'>Log Out</button>
+        </Link>
+
       </nav>
     </div>
   )
