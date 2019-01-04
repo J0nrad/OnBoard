@@ -8,7 +8,8 @@ import LogInFormContainer from './session_form/login_form_container';
 import ProductFormContainer from './products/product_form/product_form_container';
 import ProductShowContainer from './products/product_show/product_show_container';
 import ProductFeedContainer from './products/product_feed/product_feed_container';
-import ProductCategoryFeed from './products/product_feed/product_category_feed';
+import SearchBarShowContainer from './nav_bar/search_bar_show_container';
+import SearchShow from './nav_bar/search_show';
 
 const App = () => (
   <div>
@@ -19,13 +20,16 @@ const App = () => (
       <Route exact path="/products" component={ProductFeedContainer}/>
       <ProtectedRoute path="/product" component={ProductFormContainer}/>
       <ProtectedRoute path="/products/:productId" component={ProductShowContainer}/>
-      <Route path="/" component={GreetingContainer} />
+      <Route exact path="/" component={GreetingContainer} />
       <Route path="/chats/:chatsId" />
+      <Route path='/search/:searchTerm' component={SearchBarShowContainer}/>
     </Switch>
   </div>
 );
 
 export default App;
+
+
 //
 // <h4 className="header-logo">onboard</h4>
 // <GreetingContainer/>

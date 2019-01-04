@@ -2,8 +2,18 @@
 //   background-image: url('ScaleWidthWyIxMjAwIl0-Eye-sym_Main.jpg');
 // }
 .header-name {
-  padding: 10%;
+  margin-bottom: 10px;
+}
 
+.greeting-product-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: black;
+  color: rgb(189, 231, 221);
+  height: 20px;
+  padding-top: 60px;
+  text-decoration: underline rgb(189, 231, 221);
 }
 
 .go-to-index {

@@ -15,6 +15,17 @@
   width: 33%;
   color: black;
   padding: 4px 10px;
+  flex-wrap: wrap;
+  min-width: 130px;
+}
+
+.all-icon {
+  border: 1px solid lightblue;
+  border-radius: 50%;
+  padding: 6px;
+  background-color: aquamarine;
+  width: 0.725em;
+  padding: 6px 9px;
 }
 
 .snow-icon {

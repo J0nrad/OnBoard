@@ -1,7 +1,11 @@
-export const fetchProducts = () => {
+export const fetchProducts = (searchTerm) => {
+  // debugger
   return $.ajax({
     method: 'GET',
-    url: 'api/products'
+    url: 'api/products',
+    data: {
+      search_term: searchTerm
+    }
   })
 };
 

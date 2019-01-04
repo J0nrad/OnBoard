@@ -1,8 +1,23 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
+import SearchBar from './search_bar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCamera } from '@fortawesome/free-solid-svg-icons';
 
-const NavBar = ({ currentUser, logout }) => {
-  const noUser = () => (
+class NavBar extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      searchTerm: '',
+      products: []
+    }
+
+    this.noUser = this.noUser.bind(this);
+    this.isAUser = this.isAUser.bind(this);
+  }
+
+  noUser() {
+    return (
     <div className="wrapper-navbar">
       <nav className="nav-left">
           <Link to="/" className="droplet-button">
@@ -16,6 +31,7 @@ const NavBar = ({ currentUser, logout }) => {
           <h1 className="home-link">onBoard</h1>
         </Link>
       </nav>
+      <SearchBar />
       <nav className="nav-right">
         <button className='login-link'>
           <Link to='/login'>Log in</Link>
@@ -26,9 +42,10 @@ const NavBar = ({ currentUser, logout }) => {
         </button>
       </nav>
     </div>
-  )
+  )}
 
-  const isAUser = () => (
+  isAUser(currentUser, logout) {
+    return (
     <div className="wrapper-navbar">
       <nav className="nav-left">
         <Link to="/" className="droplet-button">
@@ -39,20 +56,28 @@ const NavBar = ({ currentUser, logout }) => {
           </svg>
         </Link>
       </nav>
-      <input className="search-bar"
-        type="text"
-        placeholder="Search onBoard"
-      />
+      <SearchBar />
       <nav className="nav-right">
-        <Link className="log-out-text" to='/login'>
-          <button onClick={logout} className='logout-link'>Log Out</button>
+        <Link className="sell-link" to={`/product`}>
+          Sell your board
+          <FontAwesomeIcon className="sell-your-stuff-icon" icon={faCamera} />
         </Link>
-
+        <div className="seperator"> | </div>
+        <Link className="log-out-text" to='/login'>
+          <button onClick={this.props.logout} className='logout-link'>Log Out</button>
+        </Link>
       </nav>
     </div>
-  )
+  )}
 
-      return currentUser ? isAUser() : noUser();
+render() {
+    const { currentUser, logout } = this.props
+    return (
+      <div>
+        { currentUser ? this.isAUser(currentUser, logout) : this.noUser() }
+      </div>
+    );
   };
+};
 
 export default withRouter(NavBar);

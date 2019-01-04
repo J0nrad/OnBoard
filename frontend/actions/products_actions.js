@@ -39,8 +39,8 @@ export const removeFeed = () => {
   });
 };
 
-export const fetchProducts = () => dispatch => {
-  return ProductApiUtil.fetchProducts().then(products => {
+export const fetchProducts = (searchTerm) => dispatch => {
+  return ProductApiUtil.fetchProducts(searchTerm).then(products => {
     return dispatch(receiveProducts(products))
   }, err => {
       return dispatch(receiveErrors(err.responseJSON));

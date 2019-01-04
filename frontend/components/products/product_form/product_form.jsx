@@ -28,7 +28,7 @@ class ProductForm extends React.Component {
   }
 
   update(field) {
-    return e => this.setState({[field]: e.currentTarget.value});
+    return e => this.setState({[field]: e.currentTarget.value})
   }
 
   handleChange(e) {

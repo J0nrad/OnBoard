@@ -1,4 +1,4 @@
-a.front-page-wrapper {
+.front-page-wrapper {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -9,14 +9,14 @@ a.front-page-wrapper {
 }
 
 .front-stack {
-  background-color: rgba(black, 0.8);
+  background-color: rgba(black, 0.89);
   border-radius: 15px;
   align-self: center;
   text-align: center;
   background-blend-mode: color;
   padding: 40px;
   border: .37px solid gray;
-  margin: 5px;
+  margin-top: 10px;
 }
 
 .front-page-header {

@@ -8,8 +8,8 @@ import {
 
 const ProductsErrorsReducer = (state = [], action) => {
   switch(action.type) {
-    case RECEIVE_ERRORS:
-      return action.errors;
+    // case RECEIVE_ERRORS:
+    //   return action.errors;
     case RECEIVE_PRODUCTS:
       return [];
     case RECEIVE_PRODUCT:

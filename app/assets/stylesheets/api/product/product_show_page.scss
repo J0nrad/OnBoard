@@ -17,11 +17,13 @@
   border-radius: 2%;
   background-color: rgba(0, 0, 0, 0.83);
   color: lightgray;
+  max-width: 600px;
 }
 
 .product-price-show {
     padding-right: 8px;
     font-family: "Open Sans";
+    margin: 2px 0px;
 }
 
 .product-show-image {
@@ -40,6 +42,20 @@
   margin-top: 10px;
 }
 
+.product-title-show {
+  max-width: 400px;
+  font-family: 'Roboto';
+  margin: 2px 0px;
+  font-size: 14px;
+}
+
+.product-description-show {
+  max-width: 400px;
+  font-family: 'Roboto', sans-serif;
+  margin: 2px 0px;
+  font-size: 12px;
+}
+
 .to-chats-show {
   line-height: 2.65px;
   width: 138px;
@@ -53,7 +69,7 @@
   background-color: none;
   color: black;
   font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
+  font-size: 10px;
   padding: 9px 15px;
   transition: 1s box-shadow;
   max-width: 150px;
@@ -72,7 +88,7 @@
   background-color: none;
   color: black;
   font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
+  font-size: 10px;
   padding: 9px 15px;
   transition: 1s box-shadow;
   max-width: 150px;

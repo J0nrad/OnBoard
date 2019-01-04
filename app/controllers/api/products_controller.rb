@@ -2,7 +2,11 @@ class Api::ProductsController < ApplicationController
   before_action :require_logged_in, only: [:create, :destroy]
 
   def index
-    @products = Product.all
+    if(params[:search_term])
+      @products = Product.where('title ilike ? OR description ilike ?', "%#{params[:search_term]}%", "%#{params[:search_term]}%")
+    else
+      @products = Product.all
+    end
   end
 
   def show
