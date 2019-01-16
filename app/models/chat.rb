@@ -12,7 +12,8 @@ class Chat < ApplicationRecord
   belongs_to :product
 
   has_many :messages
-  
+
+
 
   # has_one :seller,
   # through: :product,

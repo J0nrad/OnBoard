@@ -14,7 +14,7 @@ class Api::ProductsController < ApplicationController
   end
 
   def create
-    @product = current_user.product.new(product_params)
+    @product = @currentUser.product.new(product_params)
 
     if @product.save
       render :show

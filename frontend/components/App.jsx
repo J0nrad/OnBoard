@@ -10,6 +10,7 @@ import ProductShowContainer from './products/product_show/product_show_container
 import ProductFeedContainer from './products/product_feed/product_feed_container';
 import SearchBarShowContainer from './nav_bar/search_bar_show_container';
 import SearchShow from './nav_bar/search_show';
+import ChatShowContainer from './chats/chats_show/chat_show_container';
 
 const App = () => (
   <div>
@@ -21,7 +22,7 @@ const App = () => (
       <ProtectedRoute path="/product" component={ProductFormContainer}/>
       <ProtectedRoute path="/products/:productId" component={ProductShowContainer}/>
       <Route exact path="/" component={GreetingContainer} />
-      <Route path="/chats/:chatsId" />
+      <Route path="/chats/:chatsId" component={ChatShowContainer} />
       <Route path='/search/:searchTerm' component={SearchBarShowContainer}/>
     </Switch>
   </div>

@@ -1,13 +1,14 @@
 class Api::ChatsController < ApplicationController
   # before_action :set_chat, only: [:show, :edit, :update, :destroy]
 
-  require :
+
   def index
     @chats = Chat.all
   end
 
   def show
     @chat = Chat.find_by(id: params[:id])
+    @messages = @chat.messages
     render :show
   end
 
