@@ -12,7 +12,7 @@ Create my own User Athenticity.
 Have at least 25 products, 10 users, and 3 categories ("Surf", "Skate", "Snow").
 All front end design is created and manipulated by me personally.
 
-Technologies and Libraries
+## Technologies and Libraries
 
 * HTML5 : Used to contain the canvas that will run the game.
 * SCSS : Used to format the background, canvas, game instructions, and my contact info.
